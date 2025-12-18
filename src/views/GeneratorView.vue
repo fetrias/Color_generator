@@ -549,12 +549,14 @@ export default {
 }
 .palette {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 2rem;
   min-height: 200px;
 }
 .color-card {
   flex: 1;
+  min-width: 120px;
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s;
