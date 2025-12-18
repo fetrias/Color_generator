@@ -49,6 +49,8 @@ body {
   color: white;
   padding: 2rem;
   text-align: center;
+  width: 100%;
+  margin: 0;
 }
 
 .app-header h1 {
