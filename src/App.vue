@@ -1,4 +1,4 @@
-<template>
+ну деплой в гитха<template>
   <div id="app">
     <header class="app-header">
       <h1>Генератор цветовых палитр</h1>
@@ -13,10 +13,6 @@
     <main class="main-content">
       <router-view />
     </main>
-
-    <footer class="app-footer">
-      <p>Vue 3 + Vite • Практика 27-28</p>
-    </footer>
   </div>
 </template>
 
@@ -94,14 +90,5 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-}
-
-/* Подвал */
-.app-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
 }
 </style>
