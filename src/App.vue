@@ -30,14 +30,11 @@ body {
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
-  width: 100%;
-  overflow-x: hidden;
 }
 #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 /* Стили шапки */
 .app-header {
@@ -45,8 +42,6 @@ body {
   color: white;
   padding: 2rem;
   text-align: center;
-  width: 100%;
-  margin: 0;
 }
 .app-header h1 {
   margin-bottom: 0;
