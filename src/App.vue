@@ -78,4 +78,30 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .main-nav {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+}
 </style>
