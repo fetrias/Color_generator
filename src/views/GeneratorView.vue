@@ -497,7 +497,23 @@ export default {
 
     // Загружаем при монтировании
     onMounted(() => {
-      loadSavedPalette()
+      // Проверяем URL параметры для шаринговых ссылок
+      const urlParams = new URLSearchParams(window.location.search)
+      const colors = urlParams.get('colors')
+      
+      if (colors) {
+        // Загружаем палитру из URL
+        const colorArray = colors.split('-').map(c => '#' + c)
+        palette.value = colorArray.map(hex => ({
+          hex,
+          rgb: hexToRgb(hex),
+          locked: false
+        }))
+        localStorage.setItem('currentPalette', JSON.stringify(palette.value))
+      } else {
+        // Загружаем сохранённую или генерируем новую
+        loadSavedPalette()
+      }
     })
 
     return {

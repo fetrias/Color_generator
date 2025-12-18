@@ -243,7 +243,8 @@ export default {
       if (currentPalette.value.length === 0) return ''
       
       const colors = currentPalette.value.map(c => c.hex.substring(1)).join('-')
-      const baseUrl = window.location.origin + window.location.pathname
+      // Используем origin + base path (без текущего маршрута)
+      const baseUrl = window.location.origin + '/Color_generator/'
       return `${baseUrl}?colors=${colors}`
     })
 
