@@ -2,27 +2,27 @@
   <div id="app">
     <header class="app-header">
       <h1>Генератор цветовых палитр</h1>
+      
+      <nav class="main-nav">
+        <router-link to="/" class="nav-link">Генератор</router-link>
+        <router-link to="/library" class="nav-link">Библиотека</router-link>
+        <router-link to="/export" class="nav-link">Экспорт</router-link>
+      </nav>
     </header>
 
     <main class="main-content">
-      <ColorGenerator />
+      <router-view />
     </main>
 
     <footer class="app-footer">
-      <p>Vue 3 + Vite • Практика 27</p>
+      <p>Vue 3 + Vite • Практика 27-28</p>
     </footer>
   </div>
 </template>
 
 <script>
-import ColorGenerator from './components/ColorGenerator.vue'
-
 export default {
-  name: 'App',
-  
-  components: {
-    ColorGenerator
-  }
+  name: 'App'
 }
 </script>
 
@@ -58,6 +58,33 @@ body {
 .app-header h1 {
   margin-bottom: 0;
   font-size: 2.5rem;
+}
+
+/* Навигация */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.router-link-active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
 }
 
 /* Основное содержимое */
